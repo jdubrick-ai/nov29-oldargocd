@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nov29-oldargocd 
+  description: Secure Supply Chain Example for Code Generation Application   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=nov29-oldargocd  
+    janus-idp.io/tekton: nov29-oldargocd 
+    backstage.io/kubernetes-id: nov29-oldargocd 
+    backstage.io/techdocs-ref: dir:. 
+    quay.io/repository-slug: jdubrick-ai/nov29-oldargocd
+  tags: ["ai", "llamacpp", "vllm", "python"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
